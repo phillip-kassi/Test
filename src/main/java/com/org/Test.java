@@ -25,6 +25,7 @@ public class Test extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		//i need to do something about this eclipse, it is so slow....
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
