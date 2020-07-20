@@ -8,4 +8,4 @@
     - name: copy file from ? to ?
       copy: src=/home/phillip/Desktop/pom.xml dest=/home/phillip/Downlods/
       register: result_copy
-    - debug: msg=result_copy
+    - debug: msg={{result_copy}}
