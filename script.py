@@ -33,11 +33,8 @@ try:
                             print AdminApp.uninstall(app)
                         #print(DeploymentStatus)
                         print('localtion of the ear file: ' + ear_location)
-                        if app_passed_from_command_line == app:
-                            print AdminApp.install(ear_location,'[-node phillip-Latitude-7400Node03 -cell phillip-Latitude-7400Node03Cell -server server1 -appname ' + str(app) + ']')
-                        else:
-                            print('app will be skipped: ' + app)
-                        #we need you to start
+                        print AdminApp.install(ear_location,'[-node phillip-Latitude-7400Node03 -cell phillip-Latitude-7400Node03Cell -server server1 -appname ' + str(app) + ']')
+                    #we need you to start
                     except:
                         print('this application did not install: ' + app)
                 for app in application_name:
