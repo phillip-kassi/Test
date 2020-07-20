@@ -1,0 +1,7 @@
+{% if env is defined %}
+<h1>proxy_pass http//{{host.ipAddress}}:{{host.port}}/somehwere/{{env}}</h1>
+<hr />
+<h3>we are in prod i swear hello</h3>
+{% else %}
+<h1> dev is not defined</h1>
+{% endif %}

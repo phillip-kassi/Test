@@ -1,0 +1,16 @@
+---
+# vars file for nginx_routes
+env: dev
+location: localhost
+host_local: 127.0.0.1
+host: 
+   ipAddress: localhost
+   port: 8080
+people: 
+ - name: Tlaru
+   username: Tlaru Hlapa
+   idNumber: 9090898989
+ - name: Phillip
+   username: Phillip Hlapa
+   idNumber: 879873275
+

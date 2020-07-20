@@ -1,0 +1,15 @@
+{% if env is defined %}
+<h1>proxy_pass http//{{host.ipAddress}}:{{host.port}}/somehwere/{{env}}</h1>
+<hr />
+<h3>we are in dev hello????</h3>
+{% if people is defined %}
+    <h3>people is defined</h3>
+    {% for user in people %}
+        <a href="#">{{user.username}}</a> <br/>
+    {% endfor %}
+{% else %}
+   <h3>people is NOT defined!</h3>
+{% endif %}
+{% else %}
+<h1> dev is not defined</h1>
+{% endif %}
