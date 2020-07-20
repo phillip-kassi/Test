@@ -13,7 +13,7 @@ try:
             application_name = os.listdir(sys.argv[1])
             applications_size = len(application_name)
             app_passed_from_command_line = str(sys.argv[2])
-            ear_location = '/home/phillip/Downloads/' + str(sys.argv[2]) + '/'
+            ear_location = '/home/phillip/Downloads/mmistia-fogi-das-integration-ear-1.0.19.ear.ear'
             app_installed = 'this application did not install'
             print('LOG: are we here? ' + str(application_name) + ' : ' + str(applications_size))
             if applications_size > 0:
