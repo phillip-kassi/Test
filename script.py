@@ -25,7 +25,7 @@ try:
                 for app in application_name:
                     print('LOG: installing this application: ' + app)
                     try:
-                        DeploymentStatus =  AdminApp.getDeployStatus(app)
+                        #DeploymentStatus =  AdminApp.getDeployStatus(app)
                         if app_installed in str(DeploymentStatus):
                             print('this app is not installed')
                         else:
@@ -33,6 +33,7 @@ try:
                             print AdminApp.uninstall(app)
                         #print(DeploymentStatus)
                         if app_passed_from_command_line == app:
+                            print('localtion of the ear file: ' + ear_location)
                             print AdminApp.install(ear_location,'[-node phillip-Latitude-7400Node03 -cell phillip-Latitude-7400Node03Cell -server server1 -appname ' + str(app) + ']')
                         else:
                             print('app will be skipped: ' + app)
