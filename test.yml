@@ -11,6 +11,8 @@
     - debug: msg={{result_copy}}
     - name: create index file
       template: src="roles/nginx_routes/templates/{{env}}/index.html.j2" dest=/home/phillip/Desktop/indexfile.html
+      register: template_result
+    - debug: msg={{template_result}}
   roles:
     - nginx_routes
     
