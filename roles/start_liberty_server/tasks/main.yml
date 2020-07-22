@@ -11,7 +11,7 @@
 
 - name: start server {{ server_name }}
   command: "sh {{ server_directory }}bin/startServer.sh {{ server_name }} -user {{ server_user }} -password {{ server_user_password }}"
-  when: ("is not running" in server_status.stdout)
+  when: ("is not running" in server_status.stdout) or ("cannot be reached" in server_status.stdout)
   register: start_server_result
 
 - debug: var=start_server_result
