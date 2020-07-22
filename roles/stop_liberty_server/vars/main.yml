@@ -1,0 +1,9 @@
+---
+# vars file for start_liberty_server
+
+target_host: 127.0.0.1
+server_name: server1
+server_directory: /opt/IBM/WebSphere/AppServer/profiles/AppSrv05/
+server_profile: AppSrv05
+server_user: test
+server_user_password: test

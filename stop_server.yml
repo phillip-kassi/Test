@@ -1,0 +1,7 @@
+---
+- name: stop server
+  hosts: "{{ target_host }}"
+  become: true
+  become_method: sudo
+  roles:
+   - stop_liberty_server

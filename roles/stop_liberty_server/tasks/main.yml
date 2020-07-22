@@ -1,0 +1,17 @@
+---
+# tasks file for start_liberty_server
+
+#check server status
+
+- name: check server status
+  command: "sh {{ server_directory }}bin/serverStatus.sh {{ server_name }} -user {{ server_user }} -password {{ server_user_password }}"
+  register: server_status
+
+- debug: var=server_status
+
+- name: stop server {{ server_name }}
+  command: "sh {{ server_directory }}bin/stopServer.sh {{ server_name }} -user {{ server_user }} -password {{ server_user_password }}"
+  when: ("cannot be reached" not in server_status.stdout)
+  register: stop_server_result
+
+- debug: var=stop_server_result
