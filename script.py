@@ -13,7 +13,7 @@ try:
             application_name = os.listdir(sys.argv[1])
             applications_size = len(application_name)
             app_passed_from_command_line = str(sys.argv[2])
-            ear_location = '/home/phillip/eclipse-workspace/' + str(sys.argv[2])
+            ear_location = '/home/phillip/Downloads/mmistia-fogi-das-integration-ear-1.0.19.ear.ear'
             app_installed = 'this application did not install'
             print('LOG: are we here? ' + str(application_name) + ' : ' + str(applications_size))
             if applications_size > 0:
@@ -33,11 +33,8 @@ try:
                             print AdminApp.uninstall(app)
                         #print(DeploymentStatus)
                         print('localtion of the ear file: ' + ear_location)
-                        if app_passed_from_command_line == app:
-                            print AdminApp.install(ear_location,'[-node phillip-Latitude-7400Node03 -cell phillip-Latitude-7400Node03Cell -server server1 -appname ' + str(app) +'was9' + ']')
-                        else:
-                            print('app will be skipped: ' + app)
-                        #we need you to start
+                        print AdminApp.install(ear_location,'[-node phillip-Latitude-7400Node03 -cell phillip-Latitude-7400Node03Cell -server server1 -appname ' + str(app) + ']')
+                    #we need you to start
                     except:
                         print('this application did not install: ' + app)
                 for app in application_name:
