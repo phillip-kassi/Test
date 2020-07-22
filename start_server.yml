@@ -1,0 +1,7 @@
+---
+- name: start server
+  hosts: "{{ target_host }}"
+  become: true
+  become_method: sudo
+  roles:
+   - start_liberty_server
