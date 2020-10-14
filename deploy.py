@@ -13,6 +13,7 @@ try:
             try:
                 application_properties = sys.argv;
                 print(application_properties)
+                print(str(len(application_properties)))
                 if len(application_properties) > 0 :
                     application_name = application_properties[0]
                     application_path = '/home/phillip/eclipse-workspace/' + application_name
