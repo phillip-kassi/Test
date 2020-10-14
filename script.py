@@ -15,7 +15,7 @@ try:
                 print(application_properties)
                 if len(application_properties) > 0  and (ear in application_properties[1]):
                     application_name = application_properties[1]
-                    application_path = '/home/phillip/eclipse-workspace/' + application_name
+                    application_path = '/home/phillip/Downloads/' + application_name
                     print('PATH: ' + application_path)
                     try:
                         print AdminApp.uninstall(application_name)
